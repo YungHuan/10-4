@@ -5,6 +5,9 @@ import java.awt.event.ActionListener;
 
 public class Long extends JFrame {
     private Container cp ;
+    private Dimension screensize =Toolkit.getDefaultToolkit().getScreenSize();
+    private int screew=screensize.width,screeh=screensize.height;
+    private int frmw =300,frmh=120;
     private JLabel jl1 =new JLabel("ID");
     private JLabel jl2 =new JLabel("PassWord");
     private JTextField jtf =new JTextField();
@@ -18,7 +21,7 @@ public class Long extends JFrame {
         init2();
     }
     private void init2() {
-        this.setBounds(100, 100, 300, 100);
+        this.setBounds(screew/2-frmw/2,screeh/2-frmh/2,frmw,frmh);
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         cp = this.getContentPane();
         cp.add(jp1, BorderLayout.CENTER);
